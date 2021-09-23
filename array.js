@@ -11,43 +11,81 @@
 // }
 
 
-var arr=[4,6,5,4];
+var arr=[4,6,5,8,0,4,0,9,5];
+// var arr=[3,3,5,8,0,4,0,9,5];
+var corret=[];
 arr.sort()
+var final=[]
 
 
+for(var i=0;i<arr.length;i++){
+  // console.log('array output',arr[i])
+  var j=i+1;
 
-var final = [];  //big O    <= time complexcity    log n^2
-for(var i=0;i<arr.length;i++)
-{
-  var isFind = false;
-  
-    // console.log('output=  '+arr[i])   
-    var j;
-    for(j=0;j<arr.length;j++)
-    {
-            if(i !== j)
-            {
-               if(arr[i]===arr[j])
-               {
-                console.log("first",i , j , isFind)
-                isFind = true;
-                }
-              }
-        }
-       
-    if(isFind===false)
-    {
-      final.push(arr[i])
+  if(arr[i]===arr[j])
+  {
    
+    corret=arr[i]
+    
+  }
+  if(corret!==arr[i])
+    {    final.push(arr[i])
     }
 }
+
 console.log(final)
 
 
+  // console.log(corret)
 
+
+/*this code
+
+// var final = [];  //big O    <= time complexcity    log n^2
+// for(var i=0;i<arr.length;i++)
+// {
+//   var isFind = false;
+  
+    // console.log('output=  '+arr[i])   
+//     var j;
+//     for(j=0;j<arr.length;j++)
+//     {
+//             if(i !== j)
+//             {
+//                if(arr[i]===arr[j])
+//                {
+//                 console.log("first",i , j , isFind)
+//                 isFind = true;
+//                 }
+//               }
+//         }
+       
+//     if(isFind===false)
+//     {
+//       final.push(arr[i])
+   
+//     }
+// }
+// console.log(final)
+
+end
+*/
     //   sort 
     //  current value = privous next element && value k sath compare
 
+
+
+
+
+
+
+
+
+
+
+
+
+   //extra  code
 
   //      var final=final+' '+arr[i]
   //      {
